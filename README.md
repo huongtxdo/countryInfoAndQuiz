@@ -4,7 +4,7 @@ An application where I learnt how to use React, fetch data from API, and later s
 
 With the app, users type in the search box and the app will instantly list the countries that match with the search text when there are 10 or less matches. A newly added feature of capital quiz allows users to test their knowledge by matching the countries with their respective capitals.
 
-## Deployed on Render: <a href="https://country-info-and-capital-quiz.netlify.app/"> Click here </a>
+## Demo: <a href="https://country-info-and-capital-quiz.netlify.app/"> Click here </a>
 
 ## Tech-Stack
 
