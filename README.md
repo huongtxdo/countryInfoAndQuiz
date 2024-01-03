@@ -1,30 +1,31 @@
-# React + TypeScript + Vite
+# Country info and quiz app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An application where I learnt how to use React, fetch data from API, and later style with Material UI (MUI).
 
-Currently, two official plugins are available:
+With the app, users type in the search box and the app will instantly list the countries that match with the search text when there are 10 or less matches. A newly added feature of capital quiz allows users to test their knowledge by matching the countries with their respective capitals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Deployed on Render: <a href="https://country-info-and-capital-quiz.netlify.app/"> Click here </a>
 
-## Expanding the ESLint configuration
+## Tech-Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: A JavaScript library for building user interfaces.
+- **Material UI**: A popular CSS framework for building responsive and visually appealing web interfaces.
+- **API**: REST Countries, OpenWeather
 
-- Configure the top-level `parserOptions` property like this:
+## Setup
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+You can clone the project by using the following commands in your terminal:
+
+```
+git clone https://github.com/huongtxdo/countryInfoAndQuiz
+cd countries
+npm install
+npm start
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+A seperate API key with <a href="https://home.openweathermap.org/users/sign_up">OpenWeather</a> is required. Upon getting the key, you can set it in your process environment variables (.env file):
+
+```
+process.env.REACT_APP_API_KEY
+```
+
