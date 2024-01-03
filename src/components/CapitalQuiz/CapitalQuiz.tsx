@@ -2,7 +2,15 @@ import lodash from 'lodash';
 import { useState, useEffect, useMemo } from 'react';
 import { useLocation } from 'react-router-dom';
 
-import { Typography, Box, Button, Alert, Slider, Stack } from '@mui/material';
+import {
+  Typography,
+  Box,
+  Button,
+  Alert,
+  Slider,
+  Stack,
+  AlertColor,
+} from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import Notification from '../Notification';
@@ -21,7 +29,7 @@ const CapitalQuiz = () => {
   const [win, setWin] = useState(false);
 
   // states for notifications
-  const [severity, setSeverity] = useState<string>('');
+  const [severity, setSeverity] = useState<AlertColor | undefined>();
   const [message, setMessage] = useState<string>('');
 
   const { countries } = useCountryContext();
@@ -53,7 +61,7 @@ const CapitalQuiz = () => {
   }, [countries, difficulty, location, subCountries]);
 
   // function for changing message and severity
-  const notiChange = (message: string, severity: string) => {
+  const notiChange = (message: string, severity: AlertColor) => {
     let timer;
     const startTimer = () =>
       (timer = setTimeout(() => {
