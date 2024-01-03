@@ -18,7 +18,7 @@ You can clone the project by using the following commands in your terminal:
 
 ```
 git clone https://github.com/huongtxdo/countryInfoAndQuiz
-cd countries
+cd countryInfoAndQuiz
 npm install
 npm start
 ```
